@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>Apple Watch宣传页</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/jquery.fullPage.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="fullpage">
+    <div class="section section1">
+        <h1>它，终于来了。</h1>
+        <p>
+            为了充分发挥体积小巧以及佩戴于手腕的优势，Apple Watch带来了全新的科技和互动方式。有了它，你能够即时接收并回应你常用的通知，能够时常获得鼓励来保持健康与活力，还能够以全新的方式展现你的个人风格。从功能到外观，Apple Watch 都不仅仅是一件你戴在手腕上的设备，更是一种不可或缺的自我表达。
+        </p>
+        <a href="#">进一步了解</a>
+    </div>
+    <div class="section section2">
+        <h1>真正与你贴近的个人设备</h1>
+        <a href="#">进一步了解</a>
+    </div>
+    <div class="section section3">
+        <h1>重要的事，不错过。</h1>
+        <p>Apple Watch 紧贴你的手腕，因此你可以及时、便捷地接收通知。每当你关心的人或关注的 app 有讯息送到，你就会收到一下轻触，接着你便能做出自己的回应，就这么简单。</p>
+        <a href="#">进一步了解通知</a>
+    </div>
+    <div class="section section4">
+        <h1>在三个特点鲜明的系列中找到你的风格</h1>
+        <div class="row">
+            <div class="column">
+                <img src="img/primary_large_2x.jpg" class="primary">
+                <h4 class="primary"></h4>
+                <div class="intro">
+                    <p>不锈钢表壳，蓝宝石水晶镜面，搭配多款时尚表带。</p>
+                    <a href="#">了解更多</a>
+                </div>
+            </div>
+            <div class="column">
+                <img src="img/sport_large_2x.jpg" class="sport">
+                <h4 class="sport"></h4>
+                <div class="intro">
+                    <p>不锈钢表壳，蓝宝石水晶镜面，搭配多款时尚表带。</p>
+                    <a href="#" class="more">了解更多</a>
+                </div>
+            </div>
+            <div class="column">
+                <img src="img/edition_large_2x.jpg" class="edition">
+                <h4 class="edition"></h4>
+                <div class="intro">
+                    <p>不锈钢表壳，蓝宝石水晶镜面，搭配多款时尚表带。</p>
+                    <a href="#" class="more">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/jquery.fullPage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/move.js/0.5.0/move.min.js"></script>
+<script>
+$(function(){
+    $("#fullpage").fullpage({
+    	verticalCentered:false,
+    	anchors: ['page1','page2','page3','page4'],
+    	navigation:true,
+    	// navigationPosition:'right',
+    	navigationTooltips:['它，终于来了。','真正与你贴近的个人设备。','重要的事，不错过。','在三个特点鲜明的系列中找到你的风格'],
+        afterLoad:function(link,index){
+            switch(index){
+                case 1:
+                    move('.section1 h1').scale(1.5).end();
+                    move('.section1 p').set('margin-top','5%').end();
+                    break;
+                case 2:
+                    move('.section2 h1').scale(0.7).end();
+                    break;
+                case 3:
+                    move('.section3 h1').set('margin-left','20%').end();
+                    move('.section3 p').set('margin-left','20%').end();
+                break;
+                case 4:
+                    move('.section4 img.primary').rotate(360).end(function(){
+                        move('.section4 img.sport').rotate(360).end(function(){
+                            move('.section4 img.edition').rotate(360).end(function(){
+                                move('.section4 h4.primary').scale(1.3).end(function(){
+                                    move('.section4 h4.sport').scale(1.3).end(function(){
+                                        move('.section4 h4.edition').scale(1.3).end();
+                                    });
+                                });
+                            });
+                        });
+                    });
+                    break;
+                default:
+                    break;
+            }
+        },
+        onLeave:function(link,index){
+            switch(index){
+                case 1:
+                    move('.section1 h1').scale(1).end();
+                    move('.section1 p').set('margin-top','800px').end();
+                    break;
+ 
+                case 2:
+                    move('.section2 h1').scale(1).end();
+                    break;
+                case 3:
+                    move('.section3 h1').set('margin-left','-1500px').end();
+                    move('.section3 p').set('margin-left','1500px').end();
+                break;
+                case 4:
+                    move('.section4 img.primary').rotate(-360).end()
+                    move('.section4 img.sport').rotate(-360).end()
+                    move('.section4 img.edition').rotate(-360).end()
+                    move('.section4 h4.primary').scale(1).end()
+                    move('.section4 h4.sport').scale(1).end()
+                    move('.section4 h4.edition').scale(1).end();
+                    break;
+                default:
+                    break;
+            }
+        },
+        afterRender:function(link,index){
+            
+            
+        },
+    })	
+})
+</script>
+</body>
+</html>

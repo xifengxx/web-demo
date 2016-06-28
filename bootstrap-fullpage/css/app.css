@@ -1,0 +1,336 @@
+h1,h3,p,a,button{
+	font-family: "Helvetica Neue",Helvetica,Arial,"微软雅黑",sans-serif;
+}
+
+.side-nav{
+	position: fixed;
+	top: 40%;
+	right: 3%;
+	z-index: 1;
+}
+.side-nav ul.nav-side-nav{
+	text-align: center;
+	list-style: none;
+	margin:0;
+	padding-left: 0;
+}
+.side-nav ul.nav-side-nav >li{
+	display: block;
+	line-height: 1.45em;
+	margin:0;
+	padding:8px 0;
+	color: #595959;
+}
+.side-nav li.on a{
+	background-color: #fff;
+	border-color: #fff;
+}
+.side-nav ul.nav-side-nav >li >a{
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+
+	border:1px solid #fff;
+}
+
+
+.pageContent{
+	height: 750px;
+}
+
+
+
+.onepage-bg{
+	height: 800px;
+	width: 100%;
+	position: absolute;
+	background-position: center center;
+	background-size: cover;
+}
+#onepagebg{
+	background-image: url("../images/1.jpg");
+}
+.headh1content{
+	margin-top: 150px;
+	line-height: 75px;
+}
+.title-text{
+	margin-left: 10%;
+}
+.headfontsize{
+	margin-left: 10px;
+}
+.headfontsize h1{
+	font-size: 45pt;
+	color: #fff;
+}
+.headfontsize p{
+	color: #fff;
+	margin-top: 30px;
+	line-height: 30px;
+}
+
+.twopage-bg{
+	height: 800px;
+	width: 100%;
+	position: absolute;
+	background-position: center center;
+	background-size: cover;
+}
+#twopagebg{
+	background-image: url(../images/4.jpg);
+}
+
+
+.twopage-text{
+	width: 100%;
+	text-align: center;
+}
+.twopage-text-h1{
+	margin-left: 120px;
+	letter-spacing: 2px;
+	margin-top: 85px;
+	margin-bottom: 0;
+	padding: 20px 0 0 0;
+}
+.twopage-text-h1 img{
+	width: 120px;
+	margin-top: -20px;
+}
+.twopage .row{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.twopage-courses{
+	float: left;
+	padding: 0 2px 2px 0;
+	position: relative;
+	overflow: hidden;
+}
+.twopage-courses > a{
+	width: 100%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	position: relative;
+
+}
+.classicon h3{
+	margin-top: 80px;
+	color: #d1d973;
+}
+.classicon h1{
+	color: #fff;
+}
+.classicon{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #fff;
+	opacity: 0;
+}
+.classicon:hover{
+	background-color: #1eb450;
+	opacity: 0.9;
+	transition: opacity 0.5s;
+}
+.twopagebtn{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.twopagebtn .btn-lg{
+	font-size: 25px;
+
+}
+#twopage-easy{
+	margin: 150px auto;
+}
+
+
+.threepage-bg{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	height: 800px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#threepagebg{
+	background-image: url("../images/3.jpg");
+}
+.threepagecontent{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.threepagetext{
+	margin-top: 100px;
+}
+.threepagetext p{
+	margin-top: 20px;
+	color: #000;
+	font-size: 20px;
+	line-height: 32px;
+}
+.threepagebtncontent{
+	margin-top: 330px;
+	font-size: 25px;
+}
+
+
+.fourpage-bg{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	height: 800px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#fourpagebg{
+	background-image: url("../images/5.jpg");
+}
+
+
+
+
+.course-text1{
+	color: #fff;
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+}
+.course-text1 p{
+	margin-top: 25px;
+	font-size: 20px;
+}
+.fourpage .container .carousel{
+	margin-top: 100px;
+}
+.carousel-control.left{
+	background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    background-repeat: repeat-x;
+}
+.carousel-control.right{
+	background-repeat: repeat-x;
+	background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    left: -20%;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    left: -20%;
+}
+
+.carousel{
+	height:300px;
+}
+.carousel .item{
+	width: 800px;
+}
+.carousel .item img{
+	width: 60%;
+}
+.carousel-caption{
+	width: 30%;
+	left: 65%;
+}
+.carousel-indicators{
+	margin-bottom: -20px;
+}
+
+
+
+
+.fivepage-bg{
+	height: 800px;
+	width: 100%;
+	position: absolute;
+	background-position: center center;
+	background-size: cover;
+}
+#fivepagebg{
+	background-image: url(../images/2.jpg);
+}
+.footertext{
+	margin-top: 100px;
+	width: 100%;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+.footerbtncenter{
+	margin-top: 80px;
+	text-align: center;
+}
+.queyeicon{
+	width: 200px;
+}
+.queyeicon:hover{
+	border: 2px solid #d9edf7;
+}
+
+.footertextbtn{
+	margin-top: 150px;
+	width: 100%;
+	text-align: center;
+}
+.footerbtn-text{
+	margin-top: 20px;
+	color: #ff2;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

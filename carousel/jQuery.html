@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>焦点轮播图-jQuery实现</title>
+<style>
+
+body,ul{margin: 0; padding: 0;}
+li{list-style: none;}
+a {
+    text-decoration: none;
+}
+.banner{
+    width: 800px;
+    height: 450px;
+    margin: 100px auto;
+    position: relative;
+    overflow:hidden;
+}
+
+.banner_imgs{
+    position: relative;
+    z-index: 2;
+    width: 4000px;
+    left: 0;
+    top: 0;
+}
+.banner_imgs li{
+    float: left;
+}
+
+
+.banner_imgs img{
+    height: 100%;
+    display: block;
+}
+.number{
+    width: 100%;
+    text-align:center;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    z-index: 50;
+}
+.number a{
+    display: inline-block;
+    width: 20px;
+    background-color: #ccc;
+    height: 6px;
+    overflow: hidden;
+
+}
+.number .on{
+    background-color:#fff;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    content: "";
+    height: 0;
+}
+
+.arrow {
+    position: absolute;
+    margin-top: -10px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    color: #ccc;
+    z-index: 60;
+}
+.left-arrow{
+    left: 0;
+}
+.right-arrow {
+    right: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="banner" id="banner">
+    <ul class="banner_imgs clearfix" id="pic">
+        <li><a href="javascript:;"><img src="images/banner1.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/banner2.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/banner3.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/banner4.jpg" alt=""></a></li>
+        <li><a href="javascript:;"><img src="images/banner5.jpg" alt=""></a></li>
+    </ul>
+    <div class="number" id="number">
+        <a class='on' href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </div>
+    <a href="javascript:void(0)" class=" arrow left-arrow">&lt;</a>
+    <a href="javascript:void(0)" class=" arrow right-arrow">&gt;</a>
+</div>
+
+
+
+<script type="text/javascript" src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+<script>
+/*$(function(){
+    var num2=6;
+    $("#number a").mouseover(function(e){
+        $(this).attr("class","on");
+        $(this).siblings().attr("class","");
+        num2++;
+        var num=$(this).index();
+        $("#pic li").eq(num).css("left","800px");
+        $("#pic li").eq(num).css('z-index',num2);
+        $("#pic li").eq(num).animate({left:'0'},500);
+    })
+})
+// 此代码只能实现简单的鼠标滑上变换图片效果，图片不能自动变换；并且这种方法需要li元素设置绝对定位。
+// 如果不设置li绝对定位，如何通过offset().left来实现呢？*/
+
+$(function(){
+    var picNum=$("#pic li");
+    var leftArrow=$(".left-arrow");
+    var rightArrow=$(".right-arrow");
+    var number=$("#number a");
+    var imgWidth=$("#pic img").eq(0).width();
+    var _index=0;
+    var timer=null;
+    var flag=true;
+    rightArrow.on("click",function(){
+        _index++;
+        if (_index>picNum.length-1) {
+            _index=0;
+        }
+        picChange(_index);
+        
+    })
+    leftArrow.on("click",function(){
+        _index--;
+        if (_index<0) {
+            _index=picNum.length-1;
+        }
+       
+        picChange(_index);
+        
+    })
+    number.on("click",function(){
+        _index=number.index($(this));
+        picChange(_index);
+    })
+    $(".banner").hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer=setInterval(go,2000);
+    })
+    function autoGo(){
+        timer=setInterval(go,2000);
+    }
+    autoGo();
+    function go(){
+        _index++;
+        if (_index>picNum.length-1) {
+            _index=0;
+        }
+        picChange(_index);
+    }
+    
+    function picChange(num){
+        number.eq(num).addClass("on").siblings().removeClass("on");
+        $(".banner_imgs").stop(true).animate({
+            left:-num*imgWidth
+        },1000,function(){
+            if(num>picNum.legth-1){
+                num=0;
+                $(".banner_imgs").css('left','0px');
+            }
+        })
+    }    
+})
+</script>
+</body>
+</html>

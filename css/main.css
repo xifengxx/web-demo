@@ -1,0 +1,63 @@
+body{
+	margin-top: 50px;
+}
+.nav-p{
+	float: right;
+    padding-top: 15px;
+    line-height: 20px;
+    color: yellow;
+}
+.nav-p:hover{
+	color:#fff;
+}
+.page-title{
+	text-align: center;
+	color:#b9b9b9;
+}
+.page-paragraph{
+	text-align:center;
+	color:#606060;
+	font-size: 16px;
+}
+.divider{
+	padding:10px 0;
+}
+.tab-pic{
+	height: 200px;
+	overflow: hidden;
+}
+.tab-pic img{
+	border-radius: 10px;
+    width: 100%;
+    transition: all .5s linear .3s;
+}
+.tab-pic a:hover img{
+	
+	
+	opacity: .7;
+	transform:scale(1.05);
+}
+/*多行文本溢出显示省略号*/
+.tab-paragraph{
+	/* height: 80px;
+	overflow:hidden; */
+	position: relative;
+	line-height: 1.4em;
+	height: 4.2em;
+	overflow: hidden;
+}
+.tab-paragraph::after{
+	content: "...";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-weight: 600;
+	padding: 0 1px 1px 5px;
+	background:linear-gradient(to right,transparent,#fff 55%);
+}
+.btn-width{
+	width: 100%;
+}
+.footer{
+	margin-bottom: 30px;
+}
