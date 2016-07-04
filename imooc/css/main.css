@@ -226,6 +226,7 @@ body{
 }
 .video_content{
 	height: 150px;
+	text-align: center;
 }
 .sidebar_ad{
 	height: 55px;
