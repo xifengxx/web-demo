@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="referrer" content="no-referrer">
+	<title>小巧音乐播放器</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div class="wrap">
+		<!-- 背景图片 -->
+		<div class="wrap-bg"></div>
+		<div class="wrap-content">
+			<audio src=""></audio>
+			<!-- 歌曲信息 -->
+			<div class="music-message">
+				<p class="musicname text-ellipse"></p>
+				<p class="musicer text-ellipse"></p>
+				<p class="album text-ellipse"></p>
+				<p class="record text-ellipse"></p>
+			</div>
+			<!-- 分享，收藏，喜欢按钮 -->
+			<div class="music-icon">
+				<a href="http://service.weibo.com/share/share.php?" target="_blank"><i class="fa fa-share colored" aria-hidden="true"></i></a>
+				<i class="fa fa-star colored" aria-hidden="true"></i>
+				<i class="fa fa-heart colored" aria-hidden="true"></i>
+			</div>
+		</div>
+		<!-- 进度条 -->
+		<div class="wrap-basebar">
+			<span class="progressbar"></span>
+		</div>
+		<ul class="wrap-control">
+			<!-- 音乐播放，切换频道，下一曲按钮 -->
+			<div class="play-control">
+				<i class="fa fa-play fa-large play-control-i btn1" aria-hidden="true" title="播放/暂停"></i>
+				<i class="fa fa-forward fa-large play-control-i btn3" aria-hidden="true" title="换频道"></i>
+				<i class="fa fa-step-forward fa-large play-control-i btn2" aria-hidden="true" title="下一首"></i>
+			</div>
+			<div class="music-volume"></div>
+			<!-- 随机播放 -->
+			<div class="music-control">
+				<i class="fa fa-random colored btn4" aria-hidden="true" title="随机"></i>
+			</div>
+		</ul>
+
+	</div>
+	<!-- 使用fontawesome字体图标 -->
+	<script src="https://use.fontawesome.com/3e9cf68acb.js"></script>
+	<script src="http://libs.useso.com/js/jquery/2.1.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

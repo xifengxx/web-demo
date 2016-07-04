@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>这个世界很大，我想去走走</title>
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div id="music" class="music">
+        <audio src="media/bg.mp3" loop autoplay="true" preload="auto" id="myAudio" width="25" height="25" ></audio>
+    </div>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1">
+                <div class="js-animate" data-animate="bounce">
+                    <h3>你儿时的的梦想<br>
+                        是什么？
+                    </h3>
+                    <p>作家？航天员？周游世界？</p>
+                </div>
+            </div>
+            <div class="page page2">
+                <div class="js-animate" data-animate="slideDown">
+                    <h3>你呢？</h3>
+                    <p class="js-animate page2-pg" data-animate="fadeIn">这个世界很大，我想出去走走！</p>
+                </div>
+            </div>
+            <div class="page page3">
+                <div class="js-animate" data-animate="pulse">
+                    <h3 class="page3-title">土耳其篇</h3>
+                    <p class="page3-pg">土耳其是一个横跨欧亚大陆的伊斯兰教国家，被称为"文明的摇篮"。<br><b>最佳季节：</b>4月-10月最佳，不过海岸线长达八千千米的土耳其，各区域的气候各不相同，如果要进行海水浴，5月-10月最好，去土耳其东部，则7月-9月最好。</p>
+                </div>
+            </div>
+            <div class="page page4">
+                <div class="js-animate" data-animate="tossing">
+                    <h3 class="page4-title">威尼斯篇</h3>
+                    <p class="page4-pg">威尼斯（Venice），别名“亚得里亚海的女王”、“水都”、“桥之城”及“光之城”，堪称世界最浪漫的城市之一。<br><b>最佳季节：</b>3-5月、9-11月。<br>1、每年3月～5月：春季是威尼斯最舒服的季节，平均气温10－18℃，气候宜人，景色旖旎。 <br>2、每年9月～11月：秋天的威尼斯可谓人见人爱，经过一个夏天的热闹，秋天的运河格外清澈美丽，这个季节是威尼斯最清爽的季节。</p>
+                </div>
+            </div>
+            <div class="page page5">
+                <div class="js-animate" data-animate="slideLeft">
+                    <p class="page5-pg">意大利因其拥有美丽的自然风光和为数众多的人类文化遗产而被称为美丽的国度。<br><b>最佳季节：</b>5月-10月最佳，意大利一年四季都适合旅游，旺季集中在每年5月至10月，4-6月是天气最好的季节。</p>
+                    <div class="page5-img">
+                      <img src="img/bg3.jpg" alt=""> 
+                    </div>
+                </div>
+            </div>
+            <div class="page page6">
+                <div class="js-animate" data-animate="hatch">
+                    <div class="page6-content">
+                        <h3 class="page6-title">想去哪里？<br>扫一扫，定制你的旅途</h3>
+                        <img class="page6-img" src="img/weixin.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/zepto.fullpage.js"></script>
+    <script>
+        $('.wp-inner').fullpage({
+            change: function (e) {
+                // 移除动画属性
+                $('.page').eq(e.cur).find('.js-animate').each(function() {
+                    $(this).removeClass($(this).data('animate')).hide();
+                });
+            },
+            afterChange: function (e) {
+                // 添加动画属性
+                $('.page').eq(e.cur).find('.js-animate')
+                    .each(function () {
+                        $(this).addClass($(this).data('animate')).show();
+                    });
+            }
+        });
+        var myAudio=$("#myAudio")[0];
+        //  不能写成var myAudio=$("#myAudio");
+        function playAudio(){
+            myAudio.play();
+        }
+        function stopAudio(){
+            myAudio.pause();
+        }
+
+        $('body').one('touchstart', function () {
+            playAudio();
+            $('#music').on('click', function (e) {
+                if (myAudio.paused) {
+                     playAudio();
+                } else{
+                    stopAudio();
+                }
+                
+            });
+        });
+
+        myAudio.addEventListener('pause' ,function (e) {
+            $('#music').addClass('stop');
+        });
+        myAudio.addEventListener('play' ,function (e) {
+            $('#music').removeClass('stop');
+        });
+
+        window.onload=function(){
+            playAudio();
+        }
+    </script>
+</body>
+</html>

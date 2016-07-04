@@ -1,0 +1,151 @@
+/* CSS reset */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	background-color: #d2d5d6;
+	height: 100%;
+	font-family: "微软雅黑",arial,sans-serif;
+}
+
+i{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style: none;
+}
+
+.text-ellipse{
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.clearf-fix:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix{*zoom:1;}
+
+/* 样式 */
+.fl{float: left;}
+.fr{float: right;}
+
+.wrap{
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -250px;
+	width: 440px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 2px 6px 7px #999;
+	background-color: #eef1f2;
+}
+.wrap-bg{
+	width: 100%;
+	height: 250px;
+	position: relative;
+}
+.wrap-content{
+	height: 110px;
+	width: 400px;
+	padding: 30px 20px 10px 20px;
+}
+.wrap-content .music-message{
+	display: inline-block;
+	width: 280px;
+	height: 100%;
+}
+.wrap-content .musicname{
+	font-weight: bold;
+	font-size: 18px;
+	color: #455569;
+}
+.musicer,.album,.record{
+	font-size: 16px;
+	color: #455569;
+}
+.wrap-content .music-icon{
+	float: right;
+}
+.wrap-content .music-icon i{
+	margin-left: 10px;
+	font-size: 22px;
+}
+i.colored{color:rgba(109, 95, 95, 0.65);}
+i.stared{color: #feec98;}
+i.loved{color: #fe8698;}
+.wrap-content .music-icon i:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+.wrap-basebar{
+	position: relative;
+	width: 400px;
+	height: 4px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	background-color: #cdd2d7;
+	cursor: pointer;
+
+}
+.wrap-basebar .progressbar{
+	display: block;
+	width: 0%;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #414141;
+}
+.wrap-control{
+	width: 400px;
+	height: 60px;
+	padding: 0 20px;
+	padding-top:10px;
+	line-height: 60px;
+}
+.play-control,.music-volume,.music-control{
+	display: inline-block;
+}
+.play-control .play-control-i{
+	width: 40px;
+	height: 40px;
+	background-color: #414141;
+	line-height: 40px;
+	border-radius: 20px;
+	color: #fff;
+	text-align: center;
+}
+
+.wrap-control .music-control{
+	float: right;
+
+}
+.wrap-control .music-control i{
+	margin-left: 10px;
+	font-size: 22px;
+}
+.wrap-control .music-control i:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+

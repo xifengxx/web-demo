@@ -1,0 +1,240 @@
+/* CSS reset */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	background-color: #d2d5d6;
+	height: 100%;
+	font-family: "微软雅黑",arial,sans-serif;
+}
+
+i{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style: none;
+}
+
+.text-ellipse{
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.clearf-fix:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix{*zoom:1;}
+
+/* 样式 */
+.fl{float: left;}
+.fr{float: right;}
+
+.wrap{
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+	margin-top: -250px;
+	width: 440px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 2px 6px 7px #999;
+	background-color: #eef1f2;
+}
+.wrap-bg{
+	width: 100%;
+	height: 250px;
+	position: relative;
+}
+.wrap-content{
+	height: 110px;
+	width: 400px;
+	padding: 30px 20px 10px 20px;
+}
+.wrap-content .music-message{
+	display: inline-block;
+	width: 280px;
+	height: 100%;
+}
+.wrap-content .musicname{
+	font-weight: bold;
+	font-size: 18px;
+	color: #455569;
+}
+.musicer,.album,.record{
+	font-size: 16px;
+	color: #455569;
+}
+
+.wrap-content .music-icon{
+	float: right;
+}
+.wrap-content .music-icon i{
+	margin-left: 10px;
+	font-size: 22px;
+}
+i.colored{color:rgba(109, 95, 95, 0.65);}
+i.stared{color: #feec98;}
+i.loved{color: #fe8698;}
+.wrap-content .music-icon i:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+
+.wrap-basebar{
+	position: relative;
+	width: 400px;
+	height: 4px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	background-color: #cdd2d7;
+	cursor: pointer;
+
+}
+.wrap-basebar .progressbar{
+	display: block;
+	width: 0%;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #414141;
+}
+
+.wrap-control{
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.wrap-control li{
+	cursor: pointer;
+}
+.play-control-i{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #414141;
+	border-radius: 20px;
+	
+	color: #fff;
+	text-align: center;
+	margin-right: 5px;
+	padding: 1px;
+}
+li.music-menu-icon,li.volume-control,li.music-random,li.music-circle{
+	background-color:#d2d5d6; 
+	color: #000;
+}
+/*i.colored2{
+	color: #ccc;
+}*/
+
+.music-menu{
+	position: absolute;
+	top: 0;
+	left: -150px;
+	z-index: 10;
+	width: 150px;
+	padding: 1em 0;
+	text-align: center;
+	overflow-y: scroll;
+	height: 500px;
+	color: #ddd;
+	background-color: rgba(0,0,0,0.5);
+}
+.music-item{
+	padding: 1em;
+	cursor: pointer;
+}
+.music-item-active{
+	background-color: #ccc;
+	color: #fff;
+}
+
+.volume-control{
+	position: relative;
+}
+.volume-control-progress{
+	display: none;
+	position: absolute;
+	top: -105px;
+	background: linear-gradient(#EEF1F2,#D2D5D6);
+	width: 40px;
+	height: 100px;
+	border-radius: 5px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.volume-control-time-end{
+	height: 100px;
+	width: 4px;
+	background-color: rgba(160, 157, 157, 0.6);
+	margin: 0 auto;
+}
+.volume-control-tag{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #5D595D;
+	margin: 0 auto;
+	margin-top: -12px;
+}
+.volume-control-time-start{
+	width: 4px;
+	background-color: #5D595D;
+	margin: 0 auto;
+}
+
+
+
+/*设置滚动条样式*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+/* Track 外层轨道*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px; */
+    background: rgba(0,0,0,0.2); 
+}
+/* 内层轨道，滚动条中间部分 */
+::-webkit-scrollbar-track-piece{
+	background:transparent;
+}
+ 
+/* thumb  滚动条里面可以拖动的那部分*/
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(210,213,214,0.5); 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

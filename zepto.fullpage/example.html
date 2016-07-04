@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>基本用法</title>
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1">第一屏</div>
+            <div class="page page2">第二屏</div>
+            <div class="page page3">第三屏</div>
+            <div class="page page4">第四屏</div>
+            <div class="page page4">第五屏</div>
+        </div>
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/zepto.fullpage.js"></script>
+    <script>
+        $('.wp-inner').fullpage({});
+    </script>
+</body>
+</html>

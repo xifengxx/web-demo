@@ -1,0 +1,179 @@
+/* 父容器需是固定高度，并且溢出为隐藏，fullpage会使用父元素的宽度和高度。 */
+.wp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;            
+}
+
+.page{
+    /*font-size: 72px;
+    line-height: 320px;*/
+    box-sizing: border-box;
+    padding-top: 40%;
+    color: rgba(3,169,244,0.9);
+    font-family: "微软雅黑", arial, "宋体";
+    text-align: center;
+}
+.page h3{
+	font-size: 40px;
+}
+.page p{
+	font-size: 22px;
+	color: white;
+}
+.page1{
+    background:url(../img/bg0.jpg) no-repeat;
+    background-size: 100%;
+}
+.page2{
+    background:url(../img/bg6.jpg) no-repeat;
+    background-size: 100%;
+}
+.page2 .page2-pg{
+	color: rgba(0, 247, 10, 0.95);
+	padding: 10%;
+}
+.page3{
+    background:url(../img/bg2.jpg) no-repeat;
+    background-size: 100%;
+}
+.page3 .page3-title{
+	margin-top: 3%;
+}
+.page3 .page3-pg{
+	font-size: 14px;
+	padding: 5%;
+	color: rgba(255,255,255,0.8);
+	text-align: left;
+}
+.page4{
+    background:url(../img/bg5.jpg) no-repeat;
+    background-size: 100%;
+}
+.page4 .page4-title{
+	margin-top: 3%;
+}
+.page4 .page4-pg{
+	font-size: 13px;
+	padding: 5%;
+	margin-top: -10%;
+	color: rgba(255,255,255,0.8);
+	text-align: left;
+}
+.page5{
+    background:url(../img/bg4.jpg) no-repeat;
+    background-size: 100%;
+}
+.page5 .page5-pg{
+	float: right;
+	width: 40%;
+	font-size: 13px;
+	margin-top: 30%;
+	padding: 5px;
+}
+.page5-img{
+	position: relative;
+	top: 100px;
+}
+.page5-img img{
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 50%;
+}
+.page6{
+    background:url(../img/bg1.jpg) no-repeat;
+    background-size: 100%;
+}
+.page6 .page6-title{
+	font-size: 30px;
+	margin-top: -15%;
+}
+.page6-img{
+	width: 200px;
+}
+
+/*  箭头设置 */
+.start{
+	position: fixed;
+	left: 50%;
+	top: 95%;
+	width: 34px;
+	height: 34px;
+	margin-left: -17px;
+	margin-top: -34px;
+}
+@keyframes start{
+	0%,30%{
+		opacity: 0.2;
+		transform: translate(0,10px);
+	}
+	60%{
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	100%{
+		opacity: 0.2;
+		transform: translate(0,-5px);
+	}
+}
+.start b{
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	margin-left: -10px;
+	width: 20px;
+	height: 12px;
+	background: url(../img/arrow.png) no-repeat;
+	background-size: 100% 100%;
+	animation: start 1.5s infinite ease-in-out;
+}
+
+/* 播放器 */
+.music{
+    position: absolute;
+    z-index: 1000;
+    right: 0px;
+    top: 0px;
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+    background: url(../img/music-0.png) content-box no-repeat;
+    background-size: 100% 100%;
+} 
+.stop {
+background: url(../img/music-1.png) content-box no-repeat;
+background-size: cover;
+}
+
+/* 适配 */
+@media screen and (min-height: 500px){
+	.page{
+		padding-top: 60%;
+	}
+	.page p{
+		font-size: 26px;
+	}
+	.page3 .page3-title,.page4 .page4-title{
+		margin-top: 5%;
+	}
+	.page3 .page3-pg{
+		font-size: 18px;
+	}
+	.page4 .page4-pg{
+		font-size: 15px;
+	}
+	.page5-img{
+		top: 100px;
+	}
+	.page5 .page5-pg{
+		font-size: 14px;
+		margin-top: 30%;
+	}
+}
+
+
+

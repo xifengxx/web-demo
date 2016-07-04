@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="referrer" content="no-referrer">
+	<title>小巧音乐播放器</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+	<div class="wrap">
+		<ul class="music-menu"></ul>
+
+		<!-- 背景图片 -->
+		<div class="wrap-bg"></div>
+		<div class="wrap-content">
+			<audio src=""></audio>
+			<!-- 歌曲信息 -->
+			<div class="music-message">
+				<p class="musicname text-ellipse"></p>
+				<p class="musicer text-ellipse"></p>
+				<p class="album text-ellipse"></p>
+				<p class="record text-ellipse"></p>
+			</div>
+			<!-- 分享，收藏，喜欢按钮 -->
+			<div class="music-icon">
+				<a href="http://service.weibo.com/share/share.php?" target="_blank"><i class="fa fa-share colored" aria-hidden="true"></i></a>
+				<i class="fa fa-star colored" aria-hidden="true"></i>
+				<i class="fa fa-heart colored" aria-hidden="true"></i>
+			</div>
+		</div>
+		<!-- 进度条 -->
+		<div class="wrap-basebar">
+			<span class="progressbar"></span>
+		</div>
+		<ul class="wrap-control clear-fix">
+			<li class="music-pre fl play-control-i btn2" title="上一首">
+				<i class="fa fa-backward fa-large " aria-hidden="true"></i>
+			</li>
+			<li class="music-play fl play-control-i " title="播放/暂停">
+				<i class="fa fa-play fa-large btn1 " aria-hidden="true"></i>
+			</li>
+			<li class="music-next fl play-control-i btn2" title="下一首">
+				<i class="fa fa-forward fa-large " aria-hidden="true"></i>
+			</li>
+
+			<li class="volume-control fr play-control-i" title="音量/静音">
+				<i class="fa fa-volume-up fa-large colored2" aria-hidden="true" ></i>
+				<div class="volume-control-progress">
+					<div class="volume-control-time-end"></div>
+					<div class="volume-control-tag"></div>
+					<div class="volume-control-time-start"></div>
+				</div>
+			</li>
+			<li class="music-menu-icon fr play-control-i" title="换频道">
+				<i class="fa fa-bars fa-large btn3 colored2 " aria-hidden="true"></i>
+			</li>
+
+			<li class="music-random fr play-control-i" title="随机播放">
+				<i class="fa fa-random colored2 btn4" aria-hidden="true"></i>
+			</li>
+	<!-- 		<li class="music-circle fr play-control-i" title="循环播放">
+		<i class="fa fa-retweet colored" aria-hidden="true"></i>
+	</li> -->
+
+		</ul>
+		
+
+	</div>
+	<!-- 使用fontawesome字体图标 -->
+	<script src="https://use.fontawesome.com/3e9cf68acb.js"></script>
+	<script src="http://libs.useso.com/js/jquery/2.1.0/jquery.min.js"></script>
+	<script src="js/main1.js"></script>
+</body>
+</html>
