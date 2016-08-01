@@ -1,0 +1,41 @@
+body{
+	color:#808080;
+	background-color: #ccc;
+}
+a:linked,a:visited{
+	color: #353538;
+  background-color: #eb6;
+}
+a:hover,a:active{
+	color: #667;
+	background-color: #fb5;
+}
+header{
+
+}
+nav{
+	color: #455;
+	background-color: rgba(213, 225, 236, 0.98);
+	border-color: #667;
+}
+article{
+	color: #353538;
+	background-color: rgba(230, 229, 229, 0.26);
+}
+a.here{
+	color: #eef;
+	background-color: rgba(137, 162, 160, 0.73);
+}
+a.here:hover{
+	color: #667;
+	background-color: #fb5;
+
+}
+tr.odd td{
+	color: #223;
+	background-color: #ec8;
+}
+tr.highlight td{
+	color: #223;
+	background-color: #cba;
+}

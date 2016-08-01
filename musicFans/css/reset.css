@@ -1,0 +1,44 @@
+@charset utf-8;
+
+*{
+	padding: 0;
+	margin: 0;
+}
+section,header,article,footer,nav{
+	display: block;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #353538;
+}
+
+body{
+	margin: 0 10%;
+	font:16px/1.8 "微软雅黑","宋体",arial;
+	
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.fr{
+	float: right;
+}
+
+footer{
+	margin: 1em 10%;
+
+}
+
+
+

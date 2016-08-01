@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas实现简易涂鸦板</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			margin: 50px auto;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500" style="box-shadow:0 5px 40px black"></canvas>
+
+	<script>
+		var canvas = document.getElementById('canvas');
+   		var context = canvas.getContext('2d')
+
+	    canvas.onmousedown = function (e) {
+	        var ev = e||window.event;
+	        var x = ev.clientX - canvas.offsetLeft;
+	        var y = ev.clientY - canvas.offsetTop;
+
+	        context.beginPath();
+	        context.moveTo(x,y);
+
+	        canvas.onmousemove = function (e) {
+	            var ev = e||window.event;
+	            var x = ev.clientX - canvas.offsetLeft;
+	            var y = ev.clientY - canvas.offsetTop;
+	            console.log(x)
+	            context.lineWidth = 5;
+	            context.strokeStyle = "red";
+
+	            context.lineTo(x,y);
+	            context.stroke()
+	        }
+	        canvas.onmouseup = function () {
+	            canvas.onmousemove = null;
+	        }
+	    }
+	</script>
+</body>
+</html>

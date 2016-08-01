@@ -1,0 +1,184 @@
+@import url(reset.css);
+@import url(color.css);
+body{
+
+}
+header{
+	background: url(../img/0.jpg) top left no-repeat;
+	background-size: cover;
+}
+nav{
+	padding-left: 10%;
+}
+nav ul{
+	width: 100%;
+	overflow: hidden;
+}
+nav li{
+	float: left;
+}
+nav li a{
+	display: block;
+	padding: .5em 2em;
+}
+
+article{
+	border: 5px solid #ccc;
+    border-radius: 15px;
+    padding: 1em 10%;
+    line-height: 1.8em;
+    min-height: 370px;
+}
+article p{
+	margin: 1em 0;
+}
+#album{
+	width: 100%;
+	text-align: center;
+}
+#album li{
+	display: inline-block;
+	width: 7.5%;
+	background-color: rgba(141, 198, 220, 0.54);
+    border-radius: 6px;
+}
+#slideshow{
+	margin: 0 auto;
+	width: 600px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+	border:5px solid rgba(245, 239, 239, 0.33);
+}
+#preview{
+	position: absolute;
+	border-width: 0;
+	outline-width: 0;
+}
+
+/*about*/
+#about article{
+	background: url(../img/8.00.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.8
+}
+.about{
+	padding-left: 0;
+	background-color: transparent;
+}
+.about li{
+	display: block;
+	float: none;
+}
+.about li a{
+	display: inline-block;
+	padding: .5em 1em;
+	border: 1px solid #9E9E9E;
+    border-radius: 8px;
+    background: #D4D4D4;
+}
+#person p,#song p{
+	text-indent: 2em;
+}
+#song {
+	margin-top: 15px;
+}
+
+
+/*photos*/
+#photos article{
+	text-align: center;
+}
+#photos article p{
+	margin: 0;
+
+    font-weight: 700;
+}
+#imagegallery{
+
+	overflow: hidden;
+	margin-top: 10px;
+}
+#imagegallery li{
+	display: inline-block;
+	/*margin-left: 5px;*/
+	font-size: 0;
+	margin-left: 5px
+}
+
+/*live*/
+td{
+	padding: .5em 3em;
+}
+th{
+	color: #edc;
+	background-color: #455
+}
+tr td{
+	color: #223;
+	background-color: #eb6;
+}
+
+/*contact*/
+fieldset{
+	border: 0;
+}
+form{
+	margin-top: 10px;
+}
+input.placeholder{
+	color: grey;
+}
+input[type=submit]{
+	display: block;
+	padding: 5px;
+	font-size: 16px;
+	background-color: #03a9f4;
+	border: none;
+	border-radius: 5px;
+}
+
+
+
+
+/*footer*/
+
+footer p{
+	display: inline-block;
+}
+.fr a{
+	background-color:rgba(141, 198, 220, 0.54);
+}
+
+/*music*/
+#music{
+    position: absolute;
+    z-index: 200;
+    right: 5%;
+    top: 15%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+   /*  background: url(../img/music-0.png) content-box no-repeat;
+   background-size: 100% 100%; */
+    cursor: pointer;
+    
+} 
+
+@keyframes rotats {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+#music img{
+	transform-style: preserve-3d;
+    animation: rotats 7s linear infinite;
+}
+#music iframe{
+
+	position: absolute;
+	top: 35%;
+	right:90%;
+}
