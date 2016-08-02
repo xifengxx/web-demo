@@ -414,6 +414,13 @@ function submitFormWithAjax( whichform, thetarget ) {
 
 
 function musicPlay(){
+  var html=document.createElement("div");
+  html.setAttribute("id","music");
+  html.innerHTML='<img src="img/music-0.png" alt="music play">'+
+      '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=1&id=3286141&auto=0&height=430" style="display:none"></iframe>';
+  document.body.appendChild(html);
+
+
 	var music=document.getElementById('music');
 	var iframe=document.getElementsByTagName('iframe')[0];
 	music.onclick=function(){
@@ -425,7 +432,6 @@ function musicPlay(){
 		
 	}
 }
-
 
 
 
